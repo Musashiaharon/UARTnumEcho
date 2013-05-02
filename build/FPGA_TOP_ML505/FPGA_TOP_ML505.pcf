@@ -1,0 +1,157 @@
+//! **************************************************************************
+// Written by: Map P.15xf on Wed May 01 17:59:50 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "FPGA_SERIAL_RX" LOCATE = SITE "AG15" LEVEL 1;
+COMP "FPGA_SERIAL_TX" LOCATE = SITE "AG20" LEVEL 1;
+COMP "USER_CLK" LOCATE = SITE "AH15" LEVEL 1;
+COMP "GPIO_SW_C" LOCATE = SITE "AJ6" LEVEL 1;
+TIMEGRP USER_CLK = BEL "cf_di_0" BEL "cf_di_1" BEL "cf_di_2" BEL "cf_di_3" BEL
+        "cf_di_4" BEL "cf_di_5" BEL "cf_di_6" BEL "cf_di_7" BEL "cf_diValid"
+        BEL "bouncyClk" BEL "uart/txreg/Out_0" BEL
+        "resetParse/BP[0].ED.ED/Register/Out_2" BEL
+        "resetParse/BP[0].ED.ED/Register/Out_1" BEL
+        "resetParse/BP[0].ED.ED/Register/Out_0" BEL "count_0" BEL "count_1"
+        BEL "count_2" BEL "count_3" BEL "count_4" BEL "count_5" BEL "count_6"
+        BEL "count_7" BEL "count_8" BEL "count_9" BEL "count_10" BEL
+        "count_11" BEL "count_12" BEL "count_13" BEL "count_14" BEL "count_15"
+        BEL "count_16" BEL "count_17" BEL "count_18" BEL "count_19" BEL
+        "count_20" BEL "count_21" BEL "count_22" BEL "count_23" BEL "count_24"
+        BEL "count_25" BEL "count_26" BEL "count_27" BEL "count_28" BEL
+        "count_29" BEL "count_30" BEL "count_31" BEL "clockBuf" BEL "cf/ra_15"
+        BEL "cf/ra_14" BEL "cf/ra_13" BEL "cf/ra_12" BEL "cf/ra_11" BEL
+        "cf/ra_10" BEL "cf/ra_9" BEL "cf/ra_8" BEL "cf/ra_7" BEL "cf/ra_6" BEL
+        "cf/ra_5" BEL "cf/ra_4" BEL "cf/ra_3" BEL "cf/ra_2" BEL "cf/ra_1" BEL
+        "cf/ra_0" BEL "uart/uatransmit/BitCounter_2" BEL
+        "uart/uatransmit/BitCounter_1" BEL "uart/uatransmit/BitCounter_3" BEL
+        "uart/uatransmit/BitCounter_0" BEL "uart/uatransmit/TXShift_8" BEL
+        "uart/uatransmit/TXShift_7" BEL "uart/uatransmit/TXShift_6" BEL
+        "uart/uatransmit/TXShift_5" BEL "uart/uatransmit/TXShift_4" BEL
+        "uart/uatransmit/TXShift_3" BEL "uart/uatransmit/TXShift_2" BEL
+        "uart/uatransmit/TXShift_1" BEL "resetParse/BP[0].D/OutReg/Out_0" BEL
+        "resetParse/BP[0].D/CntReg/Out_0" BEL
+        "resetParse/BP[0].D/CntReg/Out_1" BEL
+        "resetParse/BP[0].D/CntReg/Out_2" BEL
+        "resetParse/BP[0].D/CntReg/Out_3" BEL
+        "resetParse/BP[0].D/CntReg/Out_4" BEL
+        "resetParse/BP[0].D/CntReg/Out_5" BEL
+        "resetParse/BP[0].D/CntReg/Out_6" BEL
+        "resetParse/BP[0].D/CntReg/Out_7" BEL
+        "resetParse/BP[0].D/CntReg/Out_8" BEL
+        "resetParse/BP[0].D/CntReg/Out_9" BEL
+        "resetParse/BP[0].D/CntReg/Out_10" BEL
+        "resetParse/BP[0].D/CntReg/Out_11" BEL
+        "resetParse/BP[0].D/CntReg/Out_12" BEL
+        "resetParse/BP[0].D/CntReg/Out_13" BEL
+        "resetParse/BP[0].D/CntReg/Out_14" BEL
+        "resetParse/BP[0].D/CntReg/Out_15" BEL
+        "resetParse/BP[0].D/CntReg/Out_16" BEL
+        "resetParse/BP[0].D/CntReg/Out_17" BEL
+        "resetParse/BP[0].D/CntReg/Out_18" BEL
+        "resetParse/BP[0].D/CntReg/Out_19" BEL
+        "uart/uatransmit/ClockCounter_9" BEL "uart/uatransmit/ClockCounter_8"
+        BEL "uart/uatransmit/ClockCounter_7" BEL
+        "uart/uatransmit/ClockCounter_6" BEL "uart/uatransmit/ClockCounter_5"
+        BEL "uart/uatransmit/ClockCounter_4" BEL
+        "uart/uatransmit/ClockCounter_3" BEL "uart/uatransmit/ClockCounter_2"
+        BEL "uart/uatransmit/ClockCounter_1" BEL
+        "uart/uatransmit/ClockCounter_0" BEL "cf/wa_15" BEL "cf/wa_14" BEL
+        "cf/wa_13" BEL "cf/wa_12" BEL "cf/wa_11" BEL "cf/wa_10" BEL "cf/wa_9"
+        BEL "cf/wa_8" BEL "cf/wa_7" BEL "cf/wa_6" BEL "cf/wa_5" BEL "cf/wa_4"
+        BEL "cf/wa_3" BEL "cf/wa_2" BEL "cf/wa_1" BEL "cf/wa_0" BEL
+        "uart/uatransmit/TXShift_9" BEL "uart/uatransmit/TXShift_0" BEL
+        "cf/wa_0_1" BEL "cf/wa_1_1" BEL "cf/wa_2_1" BEL "cf/wa_3_1" BEL
+        "cf/wa_4_1" BEL "cf/wa_5_1" BEL "cf/ra_0_1" BEL "cf/ra_1_1" BEL
+        "cf/ra_2_1" BEL "cf/ra_4_1" BEL "cf/ra_3_1" BEL "cf/ra_6_1" BEL
+        "cf/ra_5_1" BEL "cf/ra_7_1" BEL "cf/wa_6_1" BEL "cf/wa_7_1" BEL
+        "cf/wa_8_1" BEL "cf/wa_9_1" BEL "cf/ra_8_1" BEL "cf/Mram_fifo481/SP"
+        BEL "cf/Mram_fifo481/DP" BEL "cf/Mram_fifo472/SP" BEL
+        "cf/Mram_fifo472/DP" BEL "cf/Mram_fifo482/SP" BEL "cf/Mram_fifo482/DP"
+        BEL "cf/Mram_fifo462/SP" BEL "cf/Mram_fifo462/DP" BEL
+        "cf/Mram_fifo461/SP" BEL "cf/Mram_fifo461/DP" BEL "cf/Mram_fifo471/SP"
+        BEL "cf/Mram_fifo471/DP" BEL "cf/Mram_fifo451/SP" BEL
+        "cf/Mram_fifo451/DP" BEL "cf/Mram_fifo442/SP" BEL "cf/Mram_fifo442/DP"
+        BEL "cf/Mram_fifo452/SP" BEL "cf/Mram_fifo452/DP" BEL
+        "cf/Mram_fifo441/SP" BEL "cf/Mram_fifo441/DP" BEL "cf/Mram_fifo432/SP"
+        BEL "cf/Mram_fifo432/DP" BEL "cf/Mram_fifo431/SP" BEL
+        "cf/Mram_fifo431/DP" BEL "cf/Mram_fifo412/SP" BEL "cf/Mram_fifo412/DP"
+        BEL "cf/Mram_fifo402/SP" BEL "cf/Mram_fifo402/DP" BEL
+        "cf/Mram_fifo401/SP" BEL "cf/Mram_fifo401/DP" BEL "cf/Mram_fifo411/SP"
+        BEL "cf/Mram_fifo411/DP" BEL "cf/Mram_fifo422/SP" BEL
+        "cf/Mram_fifo422/DP" BEL "cf/Mram_fifo421/SP" BEL "cf/Mram_fifo421/DP"
+        BEL "cf/Mram_fifo392/SP" BEL "cf/Mram_fifo392/DP" BEL
+        "cf/Mram_fifo391/SP" BEL "cf/Mram_fifo391/DP" BEL "cf/Mram_fifo381/SP"
+        BEL "cf/Mram_fifo381/DP" BEL "cf/Mram_fifo372/SP" BEL
+        "cf/Mram_fifo372/DP" BEL "cf/Mram_fifo382/SP" BEL "cf/Mram_fifo382/DP"
+        BEL "cf/Mram_fifo371/SP" BEL "cf/Mram_fifo371/DP" BEL
+        "cf/Mram_fifo362/SP" BEL "cf/Mram_fifo362/DP" BEL "cf/Mram_fifo361/SP"
+        BEL "cf/Mram_fifo361/DP" BEL "cf/Mram_fifo352/SP" BEL
+        "cf/Mram_fifo352/DP" BEL "cf/Mram_fifo342/SP" BEL "cf/Mram_fifo342/DP"
+        BEL "cf/Mram_fifo341/SP" BEL "cf/Mram_fifo341/DP" BEL
+        "cf/Mram_fifo351/SP" BEL "cf/Mram_fifo351/DP" BEL "cf/Mram_fifo331/SP"
+        BEL "cf/Mram_fifo331/DP" BEL "cf/Mram_fifo332/SP" BEL
+        "cf/Mram_fifo332/DP" BEL "cf/Mram_fifo1_RAMA" BEL "cf/Mram_fifo1_RAMB"
+        BEL "cf/Mram_fifo1_RAMC" BEL "cf/Mram_fifo1_RAMD" BEL
+        "cf/Mram_fifo10_RAMA" BEL "cf/Mram_fifo10_RAMB" BEL
+        "cf/Mram_fifo10_RAMC" BEL "cf/Mram_fifo10_RAMD" BEL
+        "cf/Mram_fifo11_RAMA" BEL "cf/Mram_fifo11_RAMB" BEL
+        "cf/Mram_fifo11_RAMC" BEL "cf/Mram_fifo11_RAMD" BEL
+        "cf/Mram_fifo12_RAMA" BEL "cf/Mram_fifo12_RAMB" BEL
+        "cf/Mram_fifo12_RAMC" BEL "cf/Mram_fifo12_RAMD" BEL
+        "cf/Mram_fifo13_RAMA" BEL "cf/Mram_fifo13_RAMB" BEL
+        "cf/Mram_fifo13_RAMC" BEL "cf/Mram_fifo13_RAMD" BEL
+        "cf/Mram_fifo14_RAMA" BEL "cf/Mram_fifo14_RAMB" BEL
+        "cf/Mram_fifo14_RAMC" BEL "cf/Mram_fifo14_RAMD" BEL
+        "cf/Mram_fifo15_RAMA" BEL "cf/Mram_fifo15_RAMB" BEL
+        "cf/Mram_fifo15_RAMC" BEL "cf/Mram_fifo15_RAMD" BEL
+        "cf/Mram_fifo16_RAMA" BEL "cf/Mram_fifo16_RAMB" BEL
+        "cf/Mram_fifo16_RAMC" BEL "cf/Mram_fifo16_RAMD" BEL
+        "cf/Mram_fifo17_RAMA" BEL "cf/Mram_fifo17_RAMB" BEL
+        "cf/Mram_fifo17_RAMC" BEL "cf/Mram_fifo17_RAMD" BEL
+        "cf/Mram_fifo18_RAMA" BEL "cf/Mram_fifo18_RAMB" BEL
+        "cf/Mram_fifo18_RAMC" BEL "cf/Mram_fifo18_RAMD" BEL
+        "cf/Mram_fifo19_RAMA" BEL "cf/Mram_fifo19_RAMB" BEL
+        "cf/Mram_fifo19_RAMC" BEL "cf/Mram_fifo19_RAMD" BEL
+        "cf/Mram_fifo2_RAMA" BEL "cf/Mram_fifo2_RAMB" BEL "cf/Mram_fifo2_RAMC"
+        BEL "cf/Mram_fifo2_RAMD" BEL "cf/Mram_fifo20_RAMA" BEL
+        "cf/Mram_fifo20_RAMB" BEL "cf/Mram_fifo20_RAMC" BEL
+        "cf/Mram_fifo20_RAMD" BEL "cf/Mram_fifo21_RAMA" BEL
+        "cf/Mram_fifo21_RAMB" BEL "cf/Mram_fifo21_RAMC" BEL
+        "cf/Mram_fifo21_RAMD" BEL "cf/Mram_fifo22_RAMA" BEL
+        "cf/Mram_fifo22_RAMB" BEL "cf/Mram_fifo22_RAMC" BEL
+        "cf/Mram_fifo22_RAMD" BEL "cf/Mram_fifo23_RAMA" BEL
+        "cf/Mram_fifo23_RAMB" BEL "cf/Mram_fifo23_RAMC" BEL
+        "cf/Mram_fifo23_RAMD" BEL "cf/Mram_fifo24_RAMA" BEL
+        "cf/Mram_fifo24_RAMB" BEL "cf/Mram_fifo24_RAMC" BEL
+        "cf/Mram_fifo24_RAMD" BEL "cf/Mram_fifo25_RAMA" BEL
+        "cf/Mram_fifo25_RAMB" BEL "cf/Mram_fifo25_RAMC" BEL
+        "cf/Mram_fifo25_RAMD" BEL "cf/Mram_fifo26_RAMA" BEL
+        "cf/Mram_fifo26_RAMB" BEL "cf/Mram_fifo26_RAMC" BEL
+        "cf/Mram_fifo26_RAMD" BEL "cf/Mram_fifo27_RAMA" BEL
+        "cf/Mram_fifo27_RAMB" BEL "cf/Mram_fifo27_RAMC" BEL
+        "cf/Mram_fifo27_RAMD" BEL "cf/Mram_fifo28_RAMA" BEL
+        "cf/Mram_fifo28_RAMB" BEL "cf/Mram_fifo28_RAMC" BEL
+        "cf/Mram_fifo28_RAMD" BEL "cf/Mram_fifo29_RAMA" BEL
+        "cf/Mram_fifo29_RAMB" BEL "cf/Mram_fifo29_RAMC" BEL
+        "cf/Mram_fifo29_RAMD" BEL "cf/Mram_fifo3_RAMA" BEL
+        "cf/Mram_fifo3_RAMB" BEL "cf/Mram_fifo3_RAMC" BEL "cf/Mram_fifo3_RAMD"
+        BEL "cf/Mram_fifo30_RAMA" BEL "cf/Mram_fifo30_RAMB" BEL
+        "cf/Mram_fifo30_RAMC" BEL "cf/Mram_fifo30_RAMD" BEL
+        "cf/Mram_fifo31_RAMA" BEL "cf/Mram_fifo31_RAMB" BEL
+        "cf/Mram_fifo31_RAMC" BEL "cf/Mram_fifo31_RAMD" BEL
+        "cf/Mram_fifo32_RAMA" BEL "cf/Mram_fifo32_RAMB" BEL
+        "cf/Mram_fifo32_RAMC" BEL "cf/Mram_fifo32_RAMD" BEL
+        "cf/Mram_fifo4_RAMA" BEL "cf/Mram_fifo4_RAMB" BEL "cf/Mram_fifo4_RAMC"
+        BEL "cf/Mram_fifo4_RAMD" BEL "cf/Mram_fifo5_RAMA" BEL
+        "cf/Mram_fifo5_RAMB" BEL "cf/Mram_fifo5_RAMC" BEL "cf/Mram_fifo5_RAMD"
+        BEL "cf/Mram_fifo6_RAMA" BEL "cf/Mram_fifo6_RAMB" BEL
+        "cf/Mram_fifo6_RAMC" BEL "cf/Mram_fifo6_RAMD" BEL "cf/Mram_fifo7_RAMA"
+        BEL "cf/Mram_fifo7_RAMB" BEL "cf/Mram_fifo7_RAMC" BEL
+        "cf/Mram_fifo7_RAMD" BEL "cf/Mram_fifo8_RAMA" BEL "cf/Mram_fifo8_RAMB"
+        BEL "cf/Mram_fifo8_RAMC" BEL "cf/Mram_fifo8_RAMD" BEL
+        "cf/Mram_fifo9_RAMA" BEL "cf/Mram_fifo9_RAMB" BEL "cf/Mram_fifo9_RAMC"
+        BEL "cf/Mram_fifo9_RAMD";
+TS_USER_CLK = PERIOD TIMEGRP "USER_CLK" 10 ns HIGH 50%;
+SCHEMATIC END;
+

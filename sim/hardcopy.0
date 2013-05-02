@@ -1,0 +1,95 @@
+ 22                                                                    |  1 module Bouncy(                                                    |  1 module ECHO_TOP_ML505(
+ 23   //--|Clock & Reset|----------------------------------------------|  2     input clk,                                                    |  2   input   GPIO_SW_C,
+    -------------                                                      |  3     input rst,                                                    |  3   input   USER_CLK,
+ 24                                                                    |  4                                                                   |  4
+ 25   BUFG        clockBuf( .I(               USER_CLK),               |  5     output reg [7:0] x,                                           |  5   input   FPGA_SERIAL_RX,
+ 26                         .O(               Clock));                 |  6     output reg [7:0] y                                            |  6   output  FPGA_SERIAL_TX
+ 27                                                                    |  7     );                                                            |  7 );
+ 28   ButtonParse        #( .Width(           1),                      |  8                                                                   |  8   //--|Parameters|------------------------------------------------
+ 29                         .DebWidth(        20),                     |  9     parameter XMIN = -38;                                         |    --------------
+ 30                         .EdgeOutWidth(    1))                      | 10     parameter XMAX = 38;                                          |  9
+ 31             resetParse( .Clock(           Clock),                  | 11     parameter YMIN = -38;                                         | 10   parameter   ClockFreq     =             100000000;  // 100 MHz
+ 32                         .Reset(           1'b0),                   | 12     parameter YMAX = 38;                                          | 11   parameter   UARTBaudRate  =             115200;     // 115.2 KBa
+ 33                         .Enable(          1'b1),                   | 13                                                                   |    ud
+ 34                         .In(              GPIO_SW_C),              | 14     reg [7:0] xv;                                                 | 12
+ 35                         .Out(             Reset));                 | 15     reg [7:0] yv;                                                 | 13   //--|Wires|-----------------------------------------------------
+ 36                                                                    | 16                                                                   |    --------------
+ 37   //--|UART|-------------------------------------------------------| 17     initial begin                                                 | 14
+    -------------                                                      | 18         xv = 1;                                                   | 15   wire        Clock, Reset;
+ 38                                                                    | 19         yv = 2;                                                   | 16   wire  [7:0] DataIn;
+ 39   UART               #( .ClockFreq(       ClockFreq),              | 20                                                                   | 17   wire        DataInValid;
+ 40                         .BaudRate(        UARTBaudRate))           | 21         x = -10;                                                  | 18   wire        DataInReady;
+ 41                   uart( .Clock(           Clock),                  | 22         y = 0;                                                    | 19   wire  [7:0] DataOut;
+ 42                         .Reset(           Reset),                  | 23     end                                                           | 20   wire        DataOutValid;
+ 43                         .DataIn(          DataIn),                 | 24                                                                   | 21   wire        DataOutReady;
+ 44                         .DataInValid(     DataInValid),            | 25     always @(posedge clk) begin                                   | 22
+ 45                         .DataInReady(     DataInReady),            | 26         if (rst) begin                                            | 23   //--|Clock & Reset|---------------------------------------------
+ 46                         .DataOut(         DataOut),                | 27             xv <= 1;                                              |    --------------
+ 47                         .DataOutValid(    DataOutValid),           | 28             yv <= 2;                                              | 24
+ 48                         .DataOutReady(    DataOutReady),           | 29             x  <= -10;                                            | 25   BUFG        clockBuf( .I(               USER_CLK),
+ 49                         .SIn(             FPGA_SERIAL_RX),         | 30             y  <= 0;                                              | 26                         .O(               Clock));
+ 50                         .SOut(            FPGA_SERIAL_TX));        | 31         end                                                       | 27
+ 51                                                                    | 32         else begin                                                | 28   ButtonParse        #( .Width(           1),
+ 52   //--|Echo|-------------------------------------------------------| 33             if ((x+xv > XMAX) || (x+xv < XMIN)) begin             | 29                         .DebWidth(        20),
+    -------------                                                      | 34                 xv <= -xv;                                        | 30                         .EdgeOutWidth(    1))
+ 53                                                                    | 35             end                                                   | 31             resetParse( .Clock(           Clock),
+ 54 parameter Delay = 5_000_000;                                       | 36             if ((y+yv > YMAX) || (y+yv < YMIN)) begin             | 32                         .Reset(           1'b0),
+ 55 reg [31:0] count;                                                  | 37                 yv <= -yv;                                        | 33                         .Enable(          1'b1),
+ 56                                                                    | 38             end                                                   | 34                         .In(              GPIO_SW_C),
+ 57 reg  [7:0]  cf_di;                                                 | 39                                                                   | 35                         .Out(             Reset));
+ 58 reg         cf_diValid;                                            | 40             x <= x + xv;                                          | 36
+ 59 wire        cf_diReady;                                            | 41             y <= y + yv;                                          | 37   //--|UART|------------------------------------------------------
+ 60 wire [7:0]  cf_do;                                                 | 42         end                                                       |    --------------
+ 61 wire        cf_doValid;                                            | 43     end                                                           | 38
+ 62 wire        cf_doReady;                                            | 44                                                                   | 39   UART               #( .ClockFreq(       ClockFreq),
+ 63 assign DataIn       = cf_do;                                       | 45 endmodule                                                         | 40                         .BaudRate(        UARTBaudRate))
+ 64 assign DataInValid  = cf_doValid;                                  |~                                                                     | 41                   uart( .Clock(           Clock),
+ 65 assign cf_doReady   = DataInReady;                                 |~                                                                     | 42                         .Reset(           Reset),
+ 66                                                                    |~                                                                     | 43                         .DataIn(          DataIn),
+ 67 CharFifo cf(                                                       |~                                                                     | 44                         .DataInValid(     DataInValid),
+ 68     .clk(           Clock),                                        |~                                                                     | 45                         .DataInReady(     DataInReady),
+ 69     .rst(           Reset),                                        |~                                                                     | 46                         .DataOut(         DataOut),
+ 70     .di(            cf_di),                                        |~                                                                     | 47                         .DataOutValid(    DataOutValid),
+ 71     .diValid(       cf_diValid),                                   |~                                                                     | 48                         .DataOutReady(    DataOutReady),
+ 72     .diReady(       cf_diReady),                                   |~                                                                     | 49                         .SIn(             FPGA_SERIAL_RX),
+ 73     .do(            cf_do),                                        |~                                                                     | 50                         .SOut(            FPGA_SERIAL_TX));
+ 74     .doValid(       cf_doValid),                                   |~                                                                     | 51
+ 75     .doReady(       cf_doReady)                                    |~                                                                     | 52   //--|Echo|------------------------------------------------------
+ 76 );                                                                 |~                                                                     |    --------------
+ 77                                                                    |~                                                                     | 53
+ 78 wire [7:0] x, y;                                                   |~                                                                     | 54   //reg       has_char;
+ 79                                                                    |~                                                                     | 55   //reg [7:0] char;
+ 80 Bouncy bouncy(                                                     |~                                                                     | 56
+ 81     .clk(       count[7]),                                         |~                                                                     | 57
+ 82     .rst(       Reset),                                            |~                                                                     | 58 wire [7:0]  cf_di;
+ 83     .x(         x),                                                |~                                                                     | 59 wire        cf_diValid;
+ 84     .y(         y)                                                 |~                                                                     | 60 wire        cf_diReady;
+ 85 );                                                                 |~                                                                     | 61 wire [7:0]  cf_do;
+ 86                                                                    |~                                                                     | 62 wire        cf_doValid;
+ 87 always @(posedge Clock) begin                                      |~                                                                     | 63 wire        cf_doReady;
+ 88     if (Reset) begin                                               |~                                                                     | 64 assign DataIn       = cf_do;
+ 89         count <= 0;                                                |~                                                                     | 65 assign DataInValid  = cf_doValid;
+ 90         cf_diValid <= 0;                                           |~                                                                     | 66 assign cf_doReady   = DataInReady;
+ 91     end                                                            |~                                                                     | 67 assign cf_di        = DataOut;
+ 92     else begin                                                     |~                                                                     | 68 assign cf_diValid   = DataOutValid;
+ 93         if (count < Delay) count <= count+1;                       |~                                                                     | 69 assign DataOutReady = cf_diReady;
+ 94         else               count <= 0;                             |~                                                                     | 70
+ 95                                                                    |~                                                                     | 71 CharFifo cf(
+ 96         if (count == 1) begin                                      |~                                                                     | 72     .clk(           Clock),
+ 97             cf_di <= x;                                            |~                                                                     | 73     .rst(           Reset),
+ 98             cf_diValid <= 1;                                       |~                                                                     | 74     .di(            cf_di),
+ 99         end                                                        |~                                                                     | 75     .diValid(       cf_diValid),
+100         else if (count == 2) begin                                 |~                                                                     | 76     .diReady(       cf_diReady),
+101             cf_di <= y;                                            |~                                                                     | 77     .do(            cf_do),
+102             cf_diValid <= 1;                                       |~                                                                     | 78     .doValid(       cf_doValid),
+103         end                                                        |~                                                                     | 79     .doReady(       cf_doReady)
+104         else if (count == 3) begin                                 |~                                                                     | 80 );
+105             cf_di <= 8'h7E; // "~"                                 |~                                                                     | 81
+106             cf_diValid <= 1;                                       |~                                                                     | 82
+107         end                                                        |~                                                                     | 83 /*
+108         else cf_diValid <= 0;                                      |~                                                                     | 84   always @(posedge Clock) begin
+109     end                                                            |~                                                                     | 85     if (Reset) has_char <= 1'b0;
+110                                                                    |~                                                                     | 86     else has_char <= has_char ? !DataInReady : DataOutValid;
+111 end                                                                |~                                                                     | 87   end
+~/UARTnumEcho/src/FPGA_TOP_ML505.v[113][unix][verilog][92%][105,24]     ~/UARTnumEcho/src/Bouncy.v[45][unix][verilog][40%][18,5]               ~/UARTnumEcho/src/EchoTOP.v[96][unix][verilog][9%][9,1]
+

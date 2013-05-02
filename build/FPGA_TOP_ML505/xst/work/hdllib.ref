@@ -1,0 +1,13 @@
+MO UART NULL ../../src/UART.v vlg48/_u_a_r_t.bin 1367456268
+MO IORegister NULL ../../src/Framework/IORegister.v vlg45/_i_o_register.bin 1367456268
+MO itoa2 NULL ../../src/itoa2.v vlg6B/itoa2.bin 1367456267
+MO Register NULL ../../src/Framework/Register.v vlg09/_register.bin 1367456268
+MO Bouncy NULL ../../src/Bouncy.v vlg70/_bouncy.bin 1367456267
+MO ButtonParse NULL ../../src/Framework/ButtonParse.v vlg53/_button_parse.bin 1367456268
+MO itoa NULL ../../src/itoa.v vlg25/itoa.bin 1367456267
+MO UAReceive NULL ../../src/UAReceive.v vlg65/_u_a_receive.bin 1367456267
+MO CharFifo NULL ../../src/CharFifo.v vlg32/_char_fifo.bin 1367456267
+MO EdgeDetect NULL ../../src/Framework/EdgeDetect.v vlg52/_edge_detect.bin 1367456268
+MO UATransmit NULL ../../src/UATransmit.v vlg60/_u_a_transmit.bin 1367456268
+MO FPGA_TOP_ML505 NULL ../../src/FPGA_TOP_ML505.v vlg2A/_f_p_g_a___t_o_p___m_l505.bin 1367456267
+MO Debouncer NULL ../../src/Framework/Debouncer.v vlg63/_debouncer.bin 1367456268

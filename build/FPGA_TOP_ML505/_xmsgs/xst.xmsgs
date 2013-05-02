@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompilers" num="301" delta="new" ><arg fmt="%s" index="1">&quot;../../src/itoa.v&quot; line 97 </arg>Too many digits specified in hex constant
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">fifo</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">fifo</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">RXShift&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">Half&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">cf_diReady</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">DataOutValid</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">DataOutReady</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">DataOut</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">rxreg</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">uart</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">uareceive</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">uart</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_fifo</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">RXShift_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UAReceive</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">xv_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Bouncy</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">yv_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Bouncy</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">yv_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Bouncy</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/rxreg/Out_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/BitCounter_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/BitCounter_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/BitCounter_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/BitCounter_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/ClockCounter_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/ClockCounter_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/ClockCounter_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/ClockCounter_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/ClockCounter_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/ClockCounter_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/ClockCounter_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/ClockCounter_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/ClockCounter_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/ClockCounter_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/HasByte</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/RXShift_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/RXShift_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/RXShift_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/RXShift_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/RXShift_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/RXShift_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/RXShift_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/RXShift_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">uart/uareceive/RXShift_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_TOP_ML505</arg>&gt;.
+</msg>
+
+</messages>
+
