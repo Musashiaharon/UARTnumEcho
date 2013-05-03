@@ -6,7 +6,7 @@ Loading device for application Rf_Device from file '5vlx110t.nph' in environment
 speed -1
 Opened constraints file FPGA_TOP_ML505.pcf.
 
-Wed May  1 18:01:12 2013
+Fri May  3 12:27:46 2013
 
 /opt/Xilinx/14.1/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -w FPGA_TOP_ML505.ncd FPGA_TOP_ML505.bit FPGA_TOP_ML505.pcf 
 

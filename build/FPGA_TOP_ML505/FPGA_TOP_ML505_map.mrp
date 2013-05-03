@@ -11,7 +11,7 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Wed May  1 17:58:35 2013
+Mapped Date    : Fri May  3 12:25:09 2013
 
 Design Summary
 --------------
@@ -63,8 +63,8 @@ Specific Feature Utilization:
 Average Fanout of Non-Clock Nets:                5.06
 
 Peak Memory Usage:  1038 MB
-Total REAL time to MAP completion:  1 mins 16 secs 
-Total CPU time to MAP completion:   1 mins 16 secs 
+Total REAL time to MAP completion:  1 mins 19 secs 
+Total CPU time to MAP completion:   1 mins 17 secs 
 
 Table of Contents
 -----------------
@@ -143,10 +143,10 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| FPGA_SERIAL_RX                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| FPGA_SERIAL_TX                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| GPIO_SW_C                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| USER_CLK                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| FPGA_SERIAL_RX                     | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| FPGA_SERIAL_TX                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| GPIO_SW_C                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| USER_CLK                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

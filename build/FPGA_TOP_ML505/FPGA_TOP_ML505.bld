@@ -33,7 +33,7 @@ NGDBUILD Design Results Summary:
 Total memory usage is 506892 kilobytes
 
 Writing NGD file "FPGA_TOP_ML505.ngd" ...
-Total REAL time to NGDBUILD completion:  11 sec
+Total REAL time to NGDBUILD completion:  12 sec
 Total CPU time to NGDBUILD completion:   11 sec
 
 Writing NGDBUILD log file "FPGA_TOP_ML505.bld"...

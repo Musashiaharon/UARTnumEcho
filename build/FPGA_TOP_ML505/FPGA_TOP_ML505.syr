@@ -4,14 +4,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.14 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.14 secs
  
 --> 
@@ -901,8 +901,8 @@ Offset:              3.259ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 33.00 secs
-Total CPU time to Xst completion: 32.27 secs
+Total REAL time to Xst completion: 35.00 secs
+Total CPU time to Xst completion: 34.17 secs
  
 --> 
 
